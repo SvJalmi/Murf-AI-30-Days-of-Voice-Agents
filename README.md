@@ -1,4 +1,4 @@
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Murf-AI-30-Days-of-Voice-Agents
 
 This repository contains a 30-day challenge focused on building AI-driven voice agents using Murf AI tools and APIs. Each day covers hands-on tasks, code snippets, and practical use cases to explore the potential of AI in voice applications.
