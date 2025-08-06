@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Agent - AI Voice Generator</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <!-- Interactive Space UI Background -->
+    <div class="space-ui-background"></div>
+    
+    <!-- Enhanced atmospheric effects -->
+    <div class="background-container">
+        <!-- Space particles -->
+        <div class="floating-light light-1"></div>
+        <div class="floating-light light-2"></div>
+        <div class="floating-light light-3"></div>
+        <div class="floating-light light-4"></div>
+        
+        <!-- UI Integration Elements -->
+        <div class="ui-space-accent accent-1"></div>
+        <div class="ui-space-accent accent-2"></div>
+        <div class="ui-space-accent accent-3"></div>
+    </div>
+    
+    <!-- Main Container -->
+    <div class="container-fluid min-vh-100">
+        <div class="card-container">
+            <!-- Main Glass Card -->
+            <div class="glass-card main-card">
+                    <!-- Header -->
+                    <div class="text-center mb-3">
+                        <div class="icon-container mb-2">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h1 class="glass-title">Voice Agent</h1>
+                        <p class="glass-subtitle">Transform text into speech</p>
+                    </div>
+                    
+                    <!-- Flash Messages -->
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                                <div class="alert alert-{{ 'success' if category == 'success' else 'danger' }} glass-alert" role="alert">
+                                    <i class="fas fa-{{ 'check-circle' if category == 'success' else 'exclamation-triangle' }} me-2"></i>
+                                    {{ message }}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    
+                    <!-- TTS Form -->
+                    <form method="POST" action="{{ url_for('generate_audio') }}" id="ttsForm" class="rectangular-form">
+                        <div class="form-group">
+                            <textarea 
+                                class="form-control glass-input" 
+                                id="text" 
+                                name="text" 
+                                rows="3" 
+                                placeholder="Enter your text here..."
+                                required
+                                maxlength="500">{{ text or '' }}</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn glass-btn glass-btn-primary" id="generateBtn">
+                                <span class="btn-content">
+                                    <i class="fas fa-magic me-2"></i>
+                                    Generate Audio
+                                </span>
+                                <span class="loading-spinner d-none">
+                                    <i class="fas fa-spinner fa-spin me-2"></i>
+                                    Creating...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <!-- Audio Player Section -->
+                    {% if audio_url %}
+                    <div class="audio-section">
+                        <div class="glass-card audio-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-volume-up me-2 text-primary"></i>
+                                <h5 class="mb-0 glass-label">Your Audio is Ready</h5>
+                            </div>
+                            
+                            <audio controls class="glass-audio w-100 mb-3" preload="metadata">
+                                <source src="{{ audio_url }}" type="audio/mpeg">
+                                <p>Your browser does not support the audio element.</p>
+                            </audio>
+                            
+                            <div class="d-flex gap-2 flex-wrap">
+                                <a href="{{ audio_url }}" download class="btn glass-btn glass-btn-secondary flex-fill">
+                                    <i class="fas fa-download me-1"></i>
+                                    Download
+                                </a>
+                                <button type="button" class="btn glass-btn glass-btn-outline" onclick="copyToClipboard('{{ audio_url }}')">
+                                    <i class="fas fa-copy me-1"></i>
+                                    Copy URL
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Echo Bot Section -->
+                <div class="glass-card echo-bot-card">
+                    <div class="text-center mb-3">
+                        <div class="icon-container mb-2">
+                            <i class="fas fa-microphone-alt"></i>
+                        </div>
+                        <h1 class="glass-title">Echo Bot</h1>
+                        <p class="glass-subtitle">Record your voice</p>
+                    </div>
+                    
+                    <!-- Recording Controls -->
+                    <div class="recording-controls rectangular-form">
+                        <div class="form-group">
+                            <button type="button" class="btn glass-btn glass-btn-primary" id="startRecordBtn">
+                                <i class="fas fa-circle me-2"></i>
+                                Start Recording
+                            </button>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn glass-btn glass-btn-secondary" id="stopRecordBtn" disabled>
+                                <i class="fas fa-stop me-2"></i>
+                                Stop Recording
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Recording Status -->
+                    <div class="recording-status mb-4" id="recordingStatus">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <span>Click "Start Recording" to begin</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Upload Status -->
+                    <div class="upload-status d-none mb-4" id="uploadStatus">
+                        <div class="glass-card upload-card">
+                            <div class="d-flex align-items-center justify-content-center" id="uploadStatusContent">
+                                <i class="fas fa-upload me-2"></i>
+                                <span>Uploading to server...</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Playback Section -->
+                    <div class="playback-section d-none" id="playbackSection">
+                        <div class="glass-card audio-card">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-play me-2 text-primary"></i>
+                                <h5 class="mb-0 glass-label">Your Recording</h5>
+                            </div>
+                            
+                            <audio controls class="glass-audio w-100 mb-3" id="recordedAudio" preload="metadata">
+                                <p>Your browser does not support the audio element.</p>
+                            </audio>
+                            
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button type="button" class="btn glass-btn glass-btn-outline flex-fill" id="recordAgainBtn">
+                                    <i class="fas fa-redo me-1"></i>
+                                    Record Again
+                                </button>
+                                <button type="button" class="btn glass-btn glass-btn-secondary" id="downloadRecordingBtn">
+                                    <i class="fas fa-download me-1"></i>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Third Card - Audio Library -->
+                <div class="glass-card main-card">
+                    <div class="text-center mb-3">
+                        <div class="icon-container mb-2">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h1 class="glass-title">Audio Library</h1>
+                        <p class="glass-subtitle">Manage your audio files</p>
+                    </div>
+                    
+                    <!-- Audio Library Content -->
+                    <div class="library-content">
+                        <div class="form-group">
+                            <button type="button" class="btn glass-btn glass-btn-primary" id="viewLibraryBtn">
+                                <i class="fas fa-folder-open me-2"></i>
+                                View Library
+                            </button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="audioUpload" class="btn glass-btn glass-btn-secondary">
+                                <i class="fas fa-upload me-2"></i>
+                                Upload Audio
+                                <input type="file" id="audioUpload" accept="audio/*" style="display: none;">
+                            </label>
+                        </div>
+                        
+                        <!-- Audio Files List -->
+                        <div class="audio-files-list mt-3" id="audioFilesList">
+                            <div class="d-flex align-items-center justify-content-center text-muted">
+                                <i class="fas fa-info-circle me-2"></i>
+                                <span>No audio files yet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
