@@ -1,4 +1,5 @@
-# 🌌 Voice Agent - Cosmic AI Voice Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 🌌 Voice Agent - AI Voice Generator
 
 A stunning web-based text-to-speech application that converts text into high-quality audio using the Murf AI TTS API. Features an epic cosmic space background with glass morphism UI elements and floating animations.
 
@@ -16,11 +17,8 @@ A stunning web-based text-to-speech application that converts text into high-qua
 - Interactive recording controls (start/stop/play)
 - Browser-based audio processing for privacy
 
-### 🌌 Epic Cosmic UI Design
-- **Stunning Space Background** - Real cosmic imagery with nebulas, planets, and stellar landscapes
+### 🌌 UI Design
 - **Glass Morphism Design** - Frosted glass cards with transparency and blur effects
-- **Floating Animations** - Subtle particle effects that drift across the cosmic scene
-- **Space-themed Elements** - Cosmic gradients, glowing effects, and stellar styling
 - **Responsive Design** - Beautiful on all devices from mobile to desktop
 
 ## 🚀 Quick Start
