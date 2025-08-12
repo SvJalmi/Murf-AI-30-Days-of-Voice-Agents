@@ -122,7 +122,6 @@ voice-agent/
 │   └── js/
 │       └── script.js   # Client-side JavaScript
 ├── README.md           # This file
-├── replit.md           # Project documentation
 └── pyproject.toml      # Python dependencies
 ```
 
