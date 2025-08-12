@@ -228,7 +228,6 @@ voice-agent/
 │   └── assets/
 │       └── image_*.png        # Cosmic background image
 ├── README.md                  # Project documentation
-├── replit.md                  # Technical architecture notes
 ├── LICENSE                    # MIT License
 └── pyproject.toml            # Python dependencies
 ```
