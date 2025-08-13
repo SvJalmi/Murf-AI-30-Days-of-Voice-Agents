@@ -1,0 +1,8 @@
+
+{
+  "name": "AI Voice Agent",
+  "description": "A conversational voice agent powered by Gemini. Speak to the agent and hear its response. This application showcases a revamped UI with a single interactive record button and automatic audio playback.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
