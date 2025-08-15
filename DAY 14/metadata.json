@@ -1,0 +1,4 @@
+{
+  "name": "AI Voice Agents",
+  "description": "An interactive web application showcasing 30 different AI voice agents. Users can select an agent, engage in a text-based conversation, and hear the agent's responses spoken aloud using browser-native text-to-speech technology."
+}
