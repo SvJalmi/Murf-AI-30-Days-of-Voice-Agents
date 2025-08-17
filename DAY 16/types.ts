@@ -1,0 +1,13 @@
+export enum RecordingState {
+  IDLE = 'IDLE',
+  PREPARING = 'PREPARING',
+  RECORDING = 'RECORDING',
+  STOPPED = 'STOPPED',
+}
+
+export enum ConnectionStatus {
+  CONNECTING = 'CONNECTING',
+  CONNECTED = 'CONNECTED',
+  DISCONNECTED = 'DISCONNECTED',
+  ERROR = 'ERROR',
+}

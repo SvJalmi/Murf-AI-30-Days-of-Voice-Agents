@@ -1,0 +1,7 @@
+{
+  "name": "AI Voice Agent: Audio Streamer",
+  "description": "A web application to record audio and stream it in real-time to a server via WebSockets for processing. This app demonstrates Day 16 of the '30 Days of AI Voice Agents' challenge.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
