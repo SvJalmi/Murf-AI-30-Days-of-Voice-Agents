@@ -1,0 +1,7 @@
+{
+  "name": "AI Voice Agent",
+  "description": "An AI voice assistant that you can talk to. It uses Gemini for responses, and browser speech recognition and synthesis for voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
