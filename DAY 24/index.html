@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agent with Persona</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Voice Agent with Persona 🎭</h1>
+        <div class="persona-selector">
+            <label for="persona-select">Choose a Persona:</label>
+            <select id="persona-select">
+                <option value="pirate">🏴‍☠️ Captain Blackbeard (Pirate)</option>
+                <option value="cowboy">🤠 Sheriff Jake (Cowboy)</option>
+                <option value="robot">🤖 ARIA-7 (Robot)</option>
+                <option value="wizard">🧙‍♂️ Merlin the Wise (Wizard)</option>
+                <option value="detective">🕵️ Inspector Holmes (Detective)</option>
+            </select>
+            <button id="set-persona-btn">Set Persona</button>
+        </div>
+
+        <div class="agent-interaction">
+            <button id="greet-btn">👋 Generate Greeting</button>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-message-btn">💬 Send Message</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Agent Output:</h2>
+            <div id="output-messages"></div>
+            <audio id="audio-player" controls autoplay></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
