@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Voice Agent with Dual Special Skills</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Voice Agent with Dual Special Skills 🎭🔍🌤️</h1>
+        
+        <div class="persona-selector">
+            <label for="persona-select">Choose a Persona:</label>
+            <select id="persona-select">
+                <option value="pirate">🏴‍☠️ Captain Blackbeard (Pirate)</option>
+                <option value="cowboy">🤠 Sheriff Jake (Cowboy)</option>
+                <option value="robot">🤖 ARIA-7 (Robot)</option>
+                <option value="wizard">🧙‍♂️ Merlin the Wise (Wizard)</option>
+                <option value="detective">🕵️ Inspector Holmes (Detective)</option>
+            </select>
+            <button id="set-persona-btn">Set Persona</button>
+        </div>
+
+        <div class="agent-interaction">
+            <button id="greet-btn">👋 Generate Greeting</button>
+            
+            <div class="skills-section">
+                <h3>🛠️ Special Skills</h3>
+                
+                <div class="skill-group">
+                    <h4>🔍 Web Search Skill</h4>
+                    <div class="search-input">
+                        <input type="text" id="search-input" placeholder="Search the web...">
+                        <button id="search-btn">🔍 Search</button>
+                    </div>
+                </div>
+                
+                <div class="skill-group">
+                    <h4>🌤️ Weather Information Skill</h4>
+                    <div class="weather-input">
+                        <input type="text" id="weather-input" placeholder="Enter location (e.g., London, New York)...">
+                        <button id="weather-btn">🌤️ Get Weather</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-message-btn">💬 Send Message</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h2>Agent Output:</h2>
+            <div id="output-messages"></div>
+            <audio id="audio-player" controls autoplay></audio>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

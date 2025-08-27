@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": "2025-08-25T15:12:10.458680",
+    "persona": "pirate",
+    "original_text": "Ahoy there, matey! Welcome aboard me ship!",
+    "styled_text": "Arrr! Ahoy there, matey! Welcome aboard me ship! Ye savvy?",
+    "filename": "greeting_pirate.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:10.779599",
+    "persona": "pirate",
+    "original_text": "Aye, treasure be what every pirate seeks! X marks the spot!",
+    "styled_text": "Arrr! Aye, treasure be what every pirate seeks! X marks the spot! Ye savvy?",
+    "filename": "voice_output_pirate_20250825_151210.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:11.042995",
+    "persona": "cowboy",
+    "original_text": "Howdy, partner! What brings ya to these parts?",
+    "styled_text": "Well, I reckon howdy, partner! what brings ya to these parts?, partner.",
+    "filename": "greeting_cowboy.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:11.205617",
+    "persona": "cowboy",
+    "original_text": "That's a mighty fine horse ya got there, partner!",
+    "styled_text": "Well, I reckon that's a mighty fine horse ya got there, partner!, partner.",
+    "filename": "voice_output_cowboy_20250825_151211.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:11.433588",
+    "persona": "robot",
+    "original_text": "Greetings, human. I am ARIA-7, your artificial intelligence assistant.",
+    "styled_text": "PROCESSING: Greetings, human. I am ARIA-7, your artificial intelligence assistant. END TRANSMISSION.",
+    "filename": "greeting_robot.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:11.634342",
+    "persona": "robot",
+    "original_text": "Input received: 'What is your primary function?'. Processing complete. How may I assist further?",
+    "styled_text": "PROCESSING: Input received: 'What is your primary function?'. Processing complete. How may I assist further? END TRANSMISSION.",
+    "filename": "voice_output_robot_20250825_151211.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:12.350301",
+    "persona": "wizard",
+    "original_text": "Greetings, young apprentice! The ancient magic flows through me.",
+    "styled_text": "By my ancient wisdom, Greetings, young apprentice! The ancient magic flows through me. So the magic reveals!",
+    "filename": "greeting_wizard.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:12.873502",
+    "persona": "wizard",
+    "original_text": "The mystical energies reveal much about your query, young one.",
+    "styled_text": "By my ancient wisdom, The mystical energies reveal much about your query, young one. So the magic reveals!",
+    "filename": "voice_output_wizard_20250825_151212.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:13.474312",
+    "persona": "detective",
+    "original_text": "Good day. I'm Inspector Holmes, and I notice everything.",
+    "styled_text": "Elementary! Good day. I'm Inspector Holmes, and I notice everything. The evidence is clear.",
+    "filename": "greeting_detective.wav"
+  },
+  {
+    "timestamp": "2025-08-25T15:12:13.666052",
+    "persona": "detective",
+    "original_text": "Fascinating observation. Let me deduce the implications.",
+    "styled_text": "Elementary! Fascinating observation. Let me deduce the implications. The evidence is clear.",
+    "filename": "voice_output_detective_20250825_151213.wav"
+  }
+]
