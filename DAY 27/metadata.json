@@ -1,0 +1,8 @@
+
+{
+  "name": "AI Voice Agent",
+  "description": "A voice-powered AI assistant. Configure your API keys, then click the microphone to start a conversation. The agent listens to your voice, processes your request with Google Gemini, and responds with a synthesized voice.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
