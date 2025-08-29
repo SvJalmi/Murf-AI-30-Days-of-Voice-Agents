@@ -1,0 +1,44 @@
+[
+  {
+    "timestamp": "2025-08-27T15:13:00.404285",
+    "persona": "pirate",
+    "original_text": "Ahoy! I've sailed the digital seas and found this treasure of information: I found 1 results for 'artificial intelligence?'. Result 1: Search result for: artificial intelligence?. This is a simulated search result for the query 'artificial intelligence?'. In a real implementation, this would contain actual web search results from Tavily API.... ",
+    "styled_text": "Arrr! Ahoy! I've sailed the digital seas and found this treasure of information: I found 1 results for 'artificial intelligence?'. Result 1: Search result for: artificial intelligence?. This is a simulated search result for the query 'artificial intelligence?'. In a real implementation, this would contain actual web search results from Tavily API....  Ye savvy?",
+    "filename": "voice_output_pirate_20250827_151300.wav"
+  },
+  {
+    "timestamp": "2025-08-27T15:13:02.138136",
+    "persona": "pirate",
+    "original_text": "Ahoy! I've checked the weather winds for ye: Weather in 'S: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures.",
+    "styled_text": "Arrr! Ahoy! I've checked the weather winds for ye: Weather in 'S: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures. Ye savvy?",
+    "filename": "voice_output_pirate_20250827_151302.wav"
+  },
+  {
+    "timestamp": "2025-08-27T15:13:03.507886",
+    "persona": "robot",
+    "original_text": "Search protocol executed. Data retrieved: I found 1 results for 'space exploration'. Result 1: Search result for: space exploration. This is a simulated search result for the query 'space exploration'. In a real implementation, this would contain actual web search results from Tavily API.... ",
+    "styled_text": "PROCESSING: Search protocol executed. Data retrieved: I found 1 results for 'space exploration'. Result 1: Search result for: space exploration. This is a simulated search result for the query 'space exploration'. In a real implementation, this would contain actual web search results from Tavily API....  END TRANSMISSION.",
+    "filename": "voice_output_robot_20250827_151303.wav"
+  },
+  {
+    "timestamp": "2025-08-27T15:13:05.018541",
+    "persona": "robot",
+    "original_text": "Weather data retrieved and analyzed: Weather in Her: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures.",
+    "styled_text": "PROCESSING: Weather data retrieved and analyzed: Weather in Her: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures. END TRANSMISSION.",
+    "filename": "voice_output_robot_20250827_151305.wav"
+  },
+  {
+    "timestamp": "2025-08-27T15:13:06.369504",
+    "persona": "detective",
+    "original_text": "My meteorological investigation reveals: Weather in Mation: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures.",
+    "styled_text": "Elementary! My meteorological investigation reveals: Weather in Mation: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures. The evidence is clear.",
+    "filename": "voice_output_detective_20250827_151306.wav"
+  },
+  {
+    "timestamp": "2025-08-27T15:13:07.470320",
+    "persona": "detective",
+    "original_text": "My meteorological investigation reveals: Weather in 'S: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures.",
+    "styled_text": "Elementary! My meteorological investigation reveals: Weather in 'S: 22\u00b0C, Partly Cloudy. Humidity is 65%, wind speed 15 km/h. A pleasant day with some clouds and mild temperatures. The evidence is clear.",
+    "filename": "voice_output_detective_20250827_151307.wav"
+  }
+]
